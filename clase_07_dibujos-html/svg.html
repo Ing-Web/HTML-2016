@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>SVG en HTML5</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <style>
+            #mysvg {
+                width: 500px;
+                height: 300px;
+                border: 1px solid #333;
+            }
+            #line1 {
+                stroke: red;
+                stroke-width: 2px;
+            }
+            #line2 {
+                stroke: green;
+                stroke-width: 10px;
+            }
+            #line3 {
+                stroke: yellow;
+                stroke-width: 5px;
+            }
+            #elipse {
+                animation: elipse 2s;
+                position: relative;
+                left: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>SVG (Scalable Vector Graphics)</h1>
+        <!-- 
+            Los gráficos SVG tienen formato xml
+            Para definir un svg se usa la etiqueta <svg></svg> y se debe definir sus dimensiones.
+
+            Todos los elementos de un grafico svg son
+            manipulables por css y js.
+
+
+
+         -->
+        <svg id="mysvg">
+            <!--  Para crear lineas se usa la etiqueta 
+            <line /> y sus atributos x1,y1,x2,y2 que son
+            las coordenadas de los puntos inicial y final
+            -->
+            <line x1="250" y1="150" x2="500" y2="300" id="line1" />
+            <line x1="500" y1="300" x2="375" y2="0" id="line2" />    
+            <line x1="375" y1="0" x2="250" y2="150" id="line3" />  
+
+            <!-- Circulo
+            <circle />
+            Con los atributos:
+            cx = coordenada X del centro
+            cy = coordenada Y del centro
+            r = radio
+             -->
+
+            <circle 
+                cx="125" 
+                cy="150" 
+                r="100" 
+                stroke="red" 
+                stroke-width="10" 
+                fill="yellow"
+            />
+
+            <!-- Rectángulos 
+            <rect />
+            Con los atributos
+            x (coordenada x inicial)
+            y (coordenada y inicial)
+            width (ancho)
+            height (alto)
+            -->
+
+            <rect 
+                x="20"
+                y="40"
+                width="30"
+                height="80"
+                fill="green"
+            />
+
+            <ellipse 
+                cx="100" 
+                cy="100" 
+                rx="100" 
+                ry="50"
+            />
+
+            <text x="100" y="200">
+                Hola amigos
+            </text>
+
+        </svg>
+
+
+    </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Formularios (2)</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    </head>
+    <body>
+        <h1>Formularios (continuacion)</h1>
+        <!-- En HTML5 llegan nuevos campos, o mejor dicho, nuevos tipos de input -->
+        <form action="form.html">
+            <!-- html no procesa formularios, este es solo un ejemplo -->
+            <!-- <div>
+                <label for="email">Su correo electrónico</label>
+                <input type="email" id="email">
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" id="password">
+            </div>
+            <div>
+                <label for="url">Su página web</label>
+                <input type="url" id="url">
+            </div>
+            <div>
+                <label for="search">Buscar</label>
+                <input type="search" id="buscar">
+            </div> -->
+            <h2>Comprar</h2>
+            <div>
+                <label for="cantidad">Cantidad</label>
+                <input 
+                    type="number" 
+                    id="cantidad" 
+                    value="1"
+                    min="1"
+                    max="10"
+                    step="2"
+                >
+            </div>
+            <div>
+                <label for="tel">Teléfono</label>
+                <input type="tel" id="tel">
+            </div>
+            <div>
+                <label for="fecha">Fecha</label>
+                <input type="date" id="fecha">
+                <!-- 
+                    Variaciones de date:
+                    type="month"
+                    type="week"
+                    type="time"
+                    type="datatime-local"
+                 -->
+            </div>
+            <div>
+                <label for="color">Selecciona tu color</label>
+                <input type="color" id="color">
+            </div>
+            <div>
+
+                <input 
+                    type="range" 
+                    min="0"
+                    max="100"
+                    step="10"
+                >
+            </div>
+            <input type="submit" value="Pagar">
+            
+            <div>
+                <!-- datalist 
+                Para crear autocompletes en los input type="text"
+                -->
+                <label for="lenguajes">Escribe el lenguaje que más dominas</label>
+                <input type="text" id="lenguajes" list="lenguajes-opciones">
+                <datalist id="lenguajes-opciones">
+                    <option value="php">
+                    <option value="html">
+                    <option value="javascript">
+                    <option value="css">
+                </datalist>
+            </div>
+
+        </form>
+    </body>
+</html>

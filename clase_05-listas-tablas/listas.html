@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Listas HTML</title>
+        <meta charset="utf-8">
+        <style>
+            body {
+                padding-bottom: 15em;
+            }
+        </style>
+    </head>
+    <body>
+      <h1>Clase 5 - Listas</h1>
+        <section>
+           <h2>Listas ol y ul</h2>
+            <!-- Listas 
+            Se usan para listar datos. Existen tres tipos:
+            <ol></ol> (ordened list)
+            <ul></ul> (unordened list)
+            <dl></dl> (definition list)
+
+            Tanto <ul></ul> y <ol></ol> usan la etiqueta <li></li> (list item) para indicar sus elementos.
+            -->
+
+            <ol>
+                <li>Lunes</li>
+                <li>Martes</li>
+                <li>Miércoles</li>
+            </ol>
+
+
+             <ul>
+                <li>Lunes</li>
+                <li>Martes</li>
+                <li>Miércoles</li>
+            </ul>
+        </section>
+        <section>
+            <!-- Listas anidadas 
+            Son listas hijas de un <li></li>. Se recomienda poner la sublista (lista hija) justo antes de </li>
+            -->
+            <h2>Listas anidadas</h2>
+            
+            <!-- Con ol -->
+            <ol>
+                <li>Lunes
+                   <ol>
+                       <li>Bañar al perro</li>     
+                       <li>Ir al dentista</li>
+                   </ol> 
+                </li>
+                <li>Martes
+                    <ol>
+                        <li>Recoger la ropa de la lavanderia</li>
+                        <li>Presentar el trabajo del instituto</li>
+                    </ol>
+                </li>
+                <li>Miércoles</li>
+            </ol>
+            
+            <!-- con ul -->
+            <ul>
+                <li>Lunes
+                   <ul>
+                       <li>Bañar al perro</li>     
+                       <li>Ir al dentista
+                           <ol>
+                               <li>sub sub item 1</li>
+                               <li>sub sub item 2</li>
+                               <li>sub sub item 3</li>
+                           </ol>
+                       </li>
+                    </ul> 
+                </li>
+                <li>Martes
+                    <ul>
+                        <li>Recoger la ropa de la lavanderia</li>
+                        <li>Presentar el trabajo del instituto</li>
+                    </ul>
+                </li>
+                <li>Miércoles</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Atributos de ol y ul</h2>
+            <!-- Atributos para ol 
+             type="1|a|A|i|I" (para indicar el tipo de numeración)
+             start="numero" (indica donde comienza la numeración)
+             reversed (es vacio, no tiene valor)
+            -->
+            <ol start="10" reversed>
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+                <li>item 4</li>
+                <li>item 5</li>
+            </ol>
+            
+            <!-- Atributos para ul 
+            type="disc|circle|square"
+            -->
+            <ul type="square">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+                <li>Item 5</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Definition lists (dl)</h2>
+            <!-- 
+            Se usan para indicar parejas de término y su definición. Por ejemplo, en glosarios, enciclopedias, diccionarios, etc.
+            La estructura es la siguiente:
+            <dl>
+                <dt></dt> (Definition term - titulo)
+                <dd></dd> (Definition description - explicacion)
+                
+                <dt></dt> 
+                <dd></dd>
+                
+                <dt></dt> 
+                <dd></dd>
+                
+                <dt></dt> 
+                <dd></dd>         
+            </dl>
+            -->
+            <dl>
+                <dt>HTML</dt>
+                <dd>Lenguaje de marcado de hipertexto</dd>
+                
+                <dt>CSS</dt>
+                <dd>Hojas de estilo en cascadas</dd>
+                
+                <dt>JavaScript</dt>
+                <dd>Lenguaje de programación del lado del cliente.</dd>
+            </dl>
+        </section>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

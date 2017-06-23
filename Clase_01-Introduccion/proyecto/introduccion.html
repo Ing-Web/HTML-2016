@@ -1,0 +1,90 @@
+<!--
+  Sintaxis de HTML
+  
+  HTML usa etiquetas, las que tienen la siguiente estructura
+    <etiqueta></etiqueta>
+    
+  Las etiquetas son de dos tipos:
+  
+  * De apertura y cierre
+    <h1></h1>
+    <ul></ul>
+    <p></p>
+    
+  * Self-closing
+    <img>
+    <br>
+    <meta>
+    <input>
+    
+  En HTML5, no es obligatorio (como era en xhtml) cerrar las etiquetas self-closing.
+  
+    <input /> (válido)
+    <input>   (válido)
+  
+  ATRIBUTOS
+  
+  Se usan para añadir datos adicionales a un elemento html. Se escriben dentro de la etiqueta de apertura. Su sintaxis es la siguiente:
+  
+    atributo="valor"
+    atributo="valor1 valor2 valor3"
+    atributo1="valor1" atributo2="valor2"
+    
+  Ejemplos:  
+  
+    <img src="imagen.jpg">
+    <img src="imagen.jpg" alt="Imagen">
+    <img src="imagen.jpg" alt="Imagen" class="imagen imagen-principal imagen-banner">
+    
+  Algunos atributos no requieren valor
+  
+    <input required>
+    
+  Existen atributos obligatorios y atributos opcionales
+  
+    <img src=""> (Atributo obligatorio)
+    <a href="">Link</a> (Atributo obligatorio)
+    
+    <img src="imagen.jpg" id="imagen"> (el id es un atributo opcional)
+    
+  Los atributos data-* se usan para poder crear nuestros propios atributos (generalmente para proyectos con JavaScript). Podemos crear cualquier atributo con tal que comience con data-
+  
+-->
+
+
+<!--
+	Estructura de todo documento HTML
+-->
+<!doctype html>
+<html lang="es">
+    <!-- La sección head es para los metadatos-->
+    <head>	
+        <!-- title muestra el título de la página y es leído por Google -->
+        <title>Mi primera página web</title>
+        <!-- Character set, para que las tildes y eñes se vean bien -->
+        <meta charset="utf-8">
+        <!-- El meta description lo lee Google y lo muestra en los resultados de búsqueda -->
+        <meta name="description" content="Este es mi primer proyecto en el curso de Escuela Digital">
+        <!-- Mostrar el favicon (icono al lado de la pestaña del navegador) -->
+        <link rel="icon" href="favicon.png">
+    </head>
+    <!--La seión body es para el contenido visible-->
+    <body>
+        
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

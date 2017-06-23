@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Microdata</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    </head>
+    <body>
+       <!-- Microdatos 
+       Permiten especificar el significado del texto. Usando un set de parámetros especificados en schema.org 
+       
+       Se indican con atributos (son tres):
+       
+       itemscope (indica el contexto, es un atributo booleano o vacío)
+       itemtype (indica el tipo de schema, extraido desde schema.org)
+       itemprop (indica el tipo de dato)
+       -->
+        <article itemscope itemtype="http://schema.org/Person">
+            <img itemprop="image" src="alvaro.jpg" alt="Alvaro Felipe">
+            <h2 itemprop="name">Alvaro Felipe</h2>
+            <p itemprop="jobTitle">Director de proyectos de Escuela Digital. Desarrollador y diseñador web. Docente.</p>
+            <p itemprop="email">alvarofelipe@escueladigital.pe</p>
+            <p itemprop="address">Lima, Perú</p>
+        </article>
+        
+         <article>
+            <img src="alvaro.jpg" alt="Alvaro Felipe">
+            <h2>Alvaro Felipe</h2>
+            <p>Director de proyectos de Escuela Digital. Desarrollador y diseñador web. Docente.</p>
+            <p>alvarofelipe@escueladigital.pe</p>
+            <p>Lima, Perú</p>
+        </article>
+        
+        <article itemscope itemtype="http://schema.org/Book">
+            <img itemprop="image" src="libro.jpg" alt="Libro">
+            <h2 itemprop="name">Don Quijote de la Mancha</h2>
+            <p itemprop="about">La historia de Don Quijote y sus aventuras</p>
+            <p itemprop="author">Miguel de Cervantes</p>
+            <p itemprop="copyrightYear">1535</p>
+        </article>
+        
+        <article>
+            <img src="libro.jpg" alt="Libro">
+            <h2>Don Quijote de la Mancha</h2>
+            <p>La historia de Don Quijote y sus aventuras</p>
+            <p>Miguel de Cervantes</p>
+            <p>1535</p>
+        </article>
+    </body>
+</html>

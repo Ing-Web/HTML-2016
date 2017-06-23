@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Atributos de los enlaces</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximun-scale=1">
+    </head>
+    <body>
+        <h1>Atributos de los enlaces</h1>
+        <!-- TITLE -->
+        <p><a href="http://cursos.escueladigital.pe" title="Inscribete al curso HTML5 Desde Cero en este enlace">Ir a los cursos</a></p>
+        
+        <!-- REL 
+          Indica la relacion del origen y el destino. El valor nofollow le dice a Google que no siga el enlace. 
+        -->
+        <a href="http://cursos.escueladigital.pe" rel="nofollow">Ir a los cursos</a>
+        
+        <!-- Target 
+           _blank (nueva ventana)
+           _self (la misma ventana, predeterminado)
+           _parent (abre en el marco superior)
+           _top (abre en la ventana principal)
+        -->
+        <iframe src="http://escueladigital.pe" width="400" height="500"></iframe>
+        
+        <!-- Download (HTML5)
+          Fuerza al navegador a descargar un archivo en lugar de abrirlo.
+        -->
+        <p><a href="/foto.jpg" download="imagen">Foto</a></p>
+    </body>
+</html>

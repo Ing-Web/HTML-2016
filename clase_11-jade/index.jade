@@ -1,0 +1,23 @@
+//- 
+  Jade es un motor de plantillas creado para Node JS. Lo que hace es permitirnos escribir HTML con una sintaxis más sencilla pues se omiten los signos </> y los cierres de etiquetas. Además, los elementos hijos se indican con identaciones.
+
+  Es importante no mezclar identaciones en Jade (es decir, tabs y espacios)
+
+  Los atributos se escriben entre paréntesis y junto a la etiqueta
+
+  Los id se indican con # luego de la etiqueta. Si no se asigna una etiqueta jade lo interpretará como un div. Lo mismo con las clases (pero con un punto).
+
+  Los comentarios se escriben de dos maneras. Con dos barras inclinadas (//) si se desea que se compilen en el html. Y con dos barras y guion (//-) si no se quiere que compilen en el html.
+
+//- 
+  include 
+    Se usa para incluir un archivo jade dentro de otro.
+
+  extends
+    Se usa para extender una plantilla y tomarla como base. Dentro de la plantilla se definen regiones usando la palabra block. Luego al extender la plantilla se invocan a esos bloques y se les inserta contenido a mano con include.
+
+extends template
+block body
+  include menu
+block footer
+  p Derechos reservados

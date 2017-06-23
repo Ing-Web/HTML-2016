@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Etiquetas semánticas de texto</title>
+        <meta charset="utf-8">
+        <meta name="description" content="En esta clase hablaremos de la semántica del texto y de los microdatos">
+        <style>
+            sup {
+                color: red;
+            }
+            sub {
+                color: green;
+            }
+            
+            kbd, p code {
+                background: #eee;
+                border: 1px solid #ddd;
+                line-height: 1.5;
+                padding: 0 .5em;
+                display: inline-block;
+                border-radius: 4px;
+            }
+            p code {
+                background: pink;
+            }
+            
+            .poema {
+                text-align: center;
+                color: #555;
+                font-size: 1.4em;
+                line-height: 1.7;
+                font-family: Georgia;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas feugiat dolor. <strong>Quisque</strong> eget eros quis neque egestas ultricies. Aliquam porttitor metus ut egestas consequat. Nullam vel dui in justo scelerisque egestas. Cras non facilisis justo. Nunc in faucibus risus.</p>     
+        <a href="http://cursos.escueladigital.pe">Ir a los cursos</a>
+        
+        <!-- Etiquetas de línea 
+        1 . Etiquetas de formato
+        -->
+        
+        <b>Bold text</b> <!-- Texto en negrita -->
+        <i>Italic text</i> <!-- Texto en cursiva -->
+        <u>Underline text</u> <!-- Texto subrayado --> 
+        <sup>Superindice</sup> <!-- Texto pequeño en la parte superior -->
+        <sub>Subindice</sub> <!-- Texto pequeño en la parte inferior -->
+        
+        <p>
+            x<sup>2</sup> + y<sup>2</sup> = z<sup>2</sup>
+        </p>
+        
+        <p>
+            C0<sub>2</sub>
+        </p>
+        
+        <p>
+            <!-- <del></del> Tacha un texto y significa eliminado-->
+            Hoy, todos los productos a <del>S/.50.00</del> S/.30.00
+        </p>
+        
+        <p>
+            <!-- <mark></mark> resalta un texto e indica importancia -->
+            Estudiar para el lunes, de la página <mark>100 hasta la 120</mark>.
+        </p>
+        
+        
+        <!-- Etiquetas de línea 
+          2. Etiquetas de código
+            <code></code>
+            <var></var>
+            <kbd></kbd>         
+          -->
+        
+        <p>Para abrir un archivo presionar <kbd>CTRL</kbd> <kbd>O</kbd></p>
+        
+        <p>Las funciones se definen con la palabra <code>function</code>. Ejemplo de una funcion en JavaScript:</p>
+        
+        <pre>
+            <code>
+function(){
+  console.log("Hola mundo");
+}
+            </code>
+        </pre>
+        
+        <article>
+        <h2>20 poemas de amor y una canción desesperada</h2>
+        <pre class="poema">
+Puedo escribir los versos más tristes esta noche. 
+
+Escribir, por ejemplo: «La noche está estrellada, 
+y tiritan, azules, los astros, a lo lejos.» 
+
+El viento de la noche gira en el cielo y canta.
+
+Puedo escribir los versos más tristes esta noche. 
+Yo la quise, y a veces ella también me quiso. 
+
+En las noches como ésta la tuve entre mis brazos. 
+La besé tantas veces bajo el cielo infinito. 
+
+Ella me quiso, a veces yo también la quería. 
+Cómo no haber amado sus grandes ojos fijos. 
+
+Puedo escribir los versos más tristes esta noche. 
+Pensar que no la tengo. Sentir que la he perdido. 
+
+Oír la noche inmensa, más inmensa sin ella. 
+Y el verso cae al alma como al pasto el rocío. 
+
+Qué importa que mi amor no pudiera guardarla. 
+La noche está estrellada y ella no está conmigo. 
+
+Eso es todo. A lo lejos alguien canta. A lo lejos. 
+Mi alma no se contenta con haberla perdido. 
+
+Como para acercarla mi mirada la busca. 
+Mi corazón la busca, y ella no está conmigo. 
+
+La misma noche que hace blanquear los mismos árboles. 
+Nosotros, los de entonces, ya no somos los mismos. 
+
+Ya no la quiero, es cierto, pero cuánto la quise. 
+Mi voz buscaba el viento para tocar su oído. 
+
+De otro. Será de otro. Como antes de mis besos. 
+Su voz, su cuerpo claro. Sus ojos infinitos. 
+
+Ya no la quiero, es cierto, pero tal vez la quiero. 
+Es tan corto el amor, y es tan largo el olvido. 
+
+Porque en noches como ésta la tuve entre mis brazos, 
+Mi alma no se contenta con haberla perdido. 
+
+Aunque éste sea el último dolor que ella me causa, 
+y éstos sean los últimos versos que yo le escribo.
+        </pre>
+        </article>
+        
+        <!-- Etiquetas semánticas de texto
+        
+        <strong></strong> se usa para indicar importancia
+        <em></em> se usa para indicar enfasis
+        
+        Citas:
+        <q></q> (en linea)
+        <blockquote></blockquote> (de bloque)
+        -->
+        
+        <p>Sócrates dijo: <q><em>Solo sé que nada sé</em></q>.</p>
+        <p>Sócrates dijo:</p>
+        <blockquote>
+            <em>Solo sé que nada sé</em>
+        </blockquote>
+        
+    </body>
+</html>

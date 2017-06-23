@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Formularios</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    </head>
+    <body>
+        <h1>Formularios</h1>
+        <!-- 
+            El elemento <form></form> envuelve al formulario 
+            El atributo action="" indica el archivo que procesará el formulario.
+
+            Los formularios reciben los datos en campos. Y hay
+            varios elementos para definir campos en HTML.
+        -->
+        <form action="form.html">
+            <!-- El campo más usado es <input type=""> 
+                El atributo type (obligatorio) indica qué tipo de
+                input es (son más de 20 aprox).
+
+                El elemento <label></label> sirve para mostrar nombres de campos. Requiere un atributo for="" que coincida con el id del campo al que se refiere.
+
+                Todo campo debe llevar el atributo name="" aunque este "aparentemente" no haga nada. Porque eso permite que los lenguajes de backend lean los campos.
+            -->
+            <!-- 
+                 input type="text" (para introducir texto)   
+             -->
+            <fieldset>
+                <legend>Datos personales</legend>
+                <div>
+                    <label for="nombre">Su nombre</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Su nombre" tabindex="2">
+                </div>
+                <div>
+                    <label for="nombre">Sus apellidos</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Sus apellidos" tabindex="1">  
+                </div>
+            </fieldset>
+            <!-- 
+                input type="checkbox" (para poner casillas de seleccion)
+             -->
+            <fieldset>
+                <legend>Datos adicionales</legend>
+                <p>Escoja sus pasatiempos favoritos</p>
+                <input type="checkbox" id="checkbox1" name="cine">
+                <label for="checkbox1">Cine</label><br>
+                <input type="checkbox" id="checkbox2" name="musica">
+                <label for="checkbox2">Musica</label><br>
+                <input type="checkbox" id="checkbox3" name="deporte">
+                <label for="checkbox3">Deporte</label>
+
+                <!-- input type="radio" 
+                Permite escoger una sola opción de un grupo de opciones.
+                -->
+                <p>Escoja su país</p>
+                <input type="radio" id="radio1" name="pais">
+                <label for="radio1">Colombia</label><br>
+                <input type="radio" id="radio2" name="pais">
+                <label for="radio2">Chile</label><br>
+                <input type="radio" id="radio3" name="pais">
+                <label for="radio3">México</label><br>
+                <input type="radio" id="radio4" name="pais">
+                <label for="radio4">España</label><br>
+                <input type="radio" id="radio5" name="pais">
+                <label for="radio5">Perú</label><br>
+
+                <div>
+                    <!-- select
+                    El elemento <select name="" id=""></select> se usa
+                    para mostrar una lista de desplegable de opciones. Cada opcion usa la etiqueta <option value=""></option>
+
+                    Puede recibir el atributo multiple (boolean) para que se escojan varias opciones. Y combinado con el atributo size se define la cantidad de opciones visibles.
+                    -->
+                    <p>Escoja su rango de edad</p>
+                    <select name="edad" id="edad">
+                        <!-- <optgroup></optgroup> se usa para envolver grupos de opciones. Con el atributo label="" se indica un título-->
+                        <optgroup label="Niños y jovenes">
+                            <!-- <option></option> 
+                                Puede recibir los atributos booleanos
+                                selected
+                                disabled
+                            -->
+                            <option value="">Menos de 10</option>
+                            <option value="">Entre 11 y 20</option>
+                        </optgroup>
+                        <optgroup label="Adultos">
+                            <option value="">Entre 21 y 30</option>
+                            <option value="">Más de 30</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <label for="textarea">Dejenos una sugerencia</label><br>
+                <textarea name="sugerencia" id="textarea" cols="50" rows="5" placeholder="Deje una sugerencia"></textarea>
+
+            </fieldset>
+            <!-- input type="submit" Se usa para enviar el form -->
+            <input type="submit" value="Enviar formulario">
+
+            <!-- Atributos de los formularios
+            
+                required    (boolean) hace obligatorio a un campo
+                disabled    (boolean) desactiva un campo
+                readonly    (boolean) campo de solo lectura
+                maxlength   (numero) Para indicar la maxima cantidad de caracteres de un campo
+                placeholder (string) Muestra un texo predeterminado
+                autofocus   (boolean) Pone el foco en un campo
+                tabindex    (numero) Indica el orden en el que se salta de campos al presionar la tecla tab
+                checked     (boolean) Para seleccionar un checkbox
+             -->
+            
+        </form>
+    </body>
+</html>

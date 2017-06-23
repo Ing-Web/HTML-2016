@@ -1,0 +1,36 @@
+block config
+  include ../config/variables
+
+<!DOCTYPE html>
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    title #{titulo}
+    meta(name="description" content="#{descripcion}")
+    link(rel="stylesheet", href="css/edgrid.css")
+    link(rel="stylesheet" href="css/estilos.css")
+  body
+    header.ed-container
+      .ed-item.web-30
+        include ../blocks/logo
+
+      .ed-item.web-70.web-main-end
+        nav
+          ul.ed-menu.web-horizontal
+            include ../blocks/menu
+
+    #banner.ed-container
+      .ed-item
+        block banner
+
+    #main.ed-container
+      main.ed-item.web-75
+        block main
+      aside.ed-item.web-25
+        include ../blocks/aside
+
+    footer
+      .ed-container
+        .ed-item
+          include ../blocks/footer
+  

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Tablas en HTML</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximun-scale=1">
+        <style>
+            table {
+                border: 1px solid #ccc;
+                margin-bottom: 1em;
+                width: 100%;
+                border-collapse: collapse;
+            }
+            
+            td, th {
+                border: 1px solid #ccc;
+                text-align: center;
+                line-height: 1.8;
+                font-size: .9em;
+            }
+            
+            /*tr:nth-child(odd){
+                background: #f9f9f9;
+            }
+            tr:nth-child(even){
+                background: #eee;
+            }*/
+            tr:hover {
+                background: lightblue;
+            }
+            
+            body {
+                padding-bottom: 15em;
+            }
+            
+            .red {
+                background: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Tablas HTML</h1>
+        
+        <section>
+            <h2>Etiquetas table, tr y td</h2>
+            <!-- Las tablas presentan datos en formato
+            filas y columnas (tipo hoja de cálculo). Para 
+            empezar debes recordar tres etiquetas:
+
+            <table></table> (el contenedor de la tabla)
+            <tr></tr> (table-row: cada una de las filas)
+            <td></td> (table-data: representa una division de la fila, es decir, una celda. Se llama table-data porque dentro de ella van los datos de la tabla).
+            -->
+            <table>
+                <tr>
+                    <td>Soy una tabla</td>
+                </tr>
+            </table>
+            
+            <table>
+                <tr>
+                    <td>Celda 1</td>
+                    <td>Celda 2</td>
+                    <td>Celda 1</td>
+                    <td>Celda 2</td>
+                </tr>
+                <tr>
+                    <td>Celda 3</td>
+                    <td>Celda 4</td>
+                    <td>Celda 1</td>
+                    <td>Celda 2</td>
+                </tr>
+                <tr>
+                    <td>Celda 3</td>
+                    <td>Celda 4</td>
+                    <td>Celda 1</td>
+                    <td>Celda 2</td>
+                </tr>
+                <tr>
+                    <td>Celda 3</td>
+                    <td>Celda 4</td>
+                    <td>Celda 1</td>
+                    <td>Celda 2</td>
+                </tr>
+            </table>
+        </section>
+        
+        <section>
+            <h2>Etiquetas th, tbody, tfoot, thead</h2>
+            <!-- 
+             th -> Se usa para indicar la cabecera de una columna. Van dentro de una fila en remplazo de los td.
+            -->
+            <table>
+                <tr>
+                    <th>Lunes</th>
+                    <th>Martes</th>
+                    <th>Miércoles</th>
+                </tr>
+                <tr>
+                    <td>Curso HTML5</td>
+                    <td>Recreo</td>
+                    <td>Curso HTML5</td>
+                </tr>
+            </table>
+            
+            <table>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Correo</th>
+                    <th>Teléfono</th>
+                </tr>
+                <tr>
+                    <td>Alvaro</td>
+                    <td>Felipe</td>
+                    <td>alvarofelipe@escueladigital.pe</td>
+                    <td>987-654-321</td>
+                </tr>
+                <tr>
+                    <td>Alvaro</td>
+                    <td>Felipe</td>
+                    <td>alvarofelipe@escueladigital.pe</td>
+                    <td>987-654-321</td>
+                </tr>
+                <tr>
+                    <td>Alvaro</td>
+                    <td>Felipe</td>
+                    <td>alvarofelipe@escueladigital.pe</td>
+                    <td>987-654-321</td>
+                </tr>
+                <tr>
+                    <td>Alvaro</td>
+                    <td>Felipe</td>
+                    <td>alvarofelipe@escueladigital.pe</td>
+                    <td>987-654-321</td>
+                </tr>
+                <tr>
+                    <td>Alvaro</td>
+                    <td>Felipe</td>
+                    <td>alvarofelipe@escueladigital.pe</td>
+                    <td>987-654-321</td>
+                </tr>
+                <tr>
+                    <td>Alvaro</td>
+                    <td>Felipe</td>
+                    <td>alvarofelipe@escueladigital.pe</td>
+                    <td>987-654-321</td>
+                </tr>
+                <tr>
+                    <td>Alvaro</td>
+                    <td>Felipe</td>
+                    <td>alvarofelipe@escueladigital.pe</td>
+                    <td>987-654-321</td>
+                </tr>
+                <tr>
+                    <td>Alvaro</td>
+                    <td>Felipe</td>
+                    <td>alvarofelipe@escueladigital.pe</td>
+                    <td>987-654-321</td>
+                </tr>
+                <tr>
+                    <td>Alvaro</td>
+                    <td>Felipe</td>
+                    <td>alvarofelipe@escueladigital.pe</td>
+                    <td>987-654-321</td>
+                </tr>
+            </table>
+                <!-- 
+                thead -> encierra la cabecera
+                tbody -> encierra los datos
+                tfoot -> encierra el pie (va antes de tbody)
+                -->
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mes</th>
+                            <th>Productos vendidos</th>
+                            <th>Ingreso neto</th>
+                            <th>Impuestos</th>
+                            <th>Ingreso final</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">Ingresos Totales</td>
+                            <td>$ 500.00</td>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr>
+                            <td>Enero</td>
+                            <td>20</td>
+                            <td>$100.00</td>
+                            <td>$30.00</td>
+                            <td>$70.00</td>
+                        </tr>
+                        <tr>
+                            <td>Febrero</td>
+                            <td>20</td>
+                            <td>$100.00</td>
+                            <td>$30.00</td>
+                            <td>$70.00</td>
+                        </tr>
+                        <tr>
+                            <td>Marzo</td>
+                            <td>20</td>
+                            <td>$100.00</td>
+                            <td>$30.00</td>
+                            <td>$70.00</td>
+                        </tr>
+                        <tr>
+                            <td>Abril</td>
+                            <td>20</td>
+                            <td>$100.00</td>
+                            <td>$30.00</td>
+                            <td>$70.00</td>
+                        </tr>
+                        <tr>
+                            <td>Mayo</td>
+                            <td>20</td>
+                            <td>$100.00</td>
+                            <td>$30.00</td>
+                            <td>$70.00</td>
+                        </tr>
+                        <tr>
+                            <td>Junio</td>
+                            <td>20</td>
+                            <td>$100.00</td>
+                            <td>$30.00</td>
+                            <td>$70.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+        </section>
+        
+        <section>
+            <h2>Caption, colgroup, col, rowspan, colspan</h2>
+            <!-- 
+                <caption></caption> Se usa para indicar el titulo de una tabla. Debe ir justo después de <table>
+              -->
+              <table>
+               <caption>Registro de asistentes</caption>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Correo</th>
+                    <th>Teléfono</th>
+                </tr>
+                <tr>
+                    <td>Alvaro</td>
+                    <td>Felipe</td>
+                    <td>alvarofelipe@escueladigital.pe</td>
+                    <td>987-654-321</td>
+                </tr>
+                <tr>
+                    <td>Alvaro</td>
+                    <td>Felipe</td>
+                    <td>alvarofelipe@escueladigital.pe</td>
+                    <td>987-654-321</td>
+                </tr>
+                <tr>
+                    <td>Alvaro</td>
+                    <td>Felipe</td>
+                    <td>alvarofelipe@escueladigital.pe</td>
+                    <td>987-654-321</td>
+                </tr>
+            </table>
+            
+            <!-- colgroup y col se usan para agrupar columnas y aplicarles atributos comunes 
+            La etiqueta <colgroup></colgroup> encierra a varias etiquetas <col> que representan una o más columnas. 
+            El atributo span="" en <col> indica cuantas columnas representa.
+            -->
+            <table>
+               <colgroup>
+                   <col span="2" style="background: yellow">
+                   <col class="red">
+                   <col style="background: purple">
+               </colgroup>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+            </table>
+            
+        </section>
+        <!-- 
+          rowspan sirve para agrupar filas y colspan sirve para agrupar columnas. Ambos son atributos cuyo valor debe ser un número entero y siempre se aplican a los td o th. No a los tr.
+        -->
+        <table>
+           <thead>
+                <tr>
+                    <th>Mes</th>
+                    <th>Ventas</th>
+                    <th>Ingresos</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <td colspan="2">
+                        Total
+                    </td>
+                    <td>
+                        $500
+                    </td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td>Marzo</td>
+                    <td>20</td>
+                    <td>$200.00</td>
+                </tr>
+                <tr>
+                    <td>Abril</td>
+                    <td>20</td>
+                    <td>$200.00</td>
+                </tr>
+            </tbody>
+            
+        </table>
+        
+        <table>
+           <thead>
+                <tr>
+                    <th>Mes</th>
+                    <th>Ventas</th>
+                    <th>Ingresos</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <td colspan="2">
+                        Total
+                    </td>
+                    <td>
+                        $500
+                    </td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td rowspan="2">Marzo</td>
+                    <td>20</td>
+                    <td>$200.00</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>$200.00</td>
+                </tr>
+            </tbody>
+            
+        </table>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

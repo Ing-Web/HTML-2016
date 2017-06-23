@@ -1,0 +1,25 @@
+extends templates/template
+append config
+  -paginaActual = "contacto"
+  -titulo = "Contacto"
+block banner
+  img(src="img/contacto.jpg")
+block main
+  h1 Contacto
+  p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi sunt optio similique accusamus debitis nulla accusantium eos in! Rem delectus, error. Tempora repellat error, eos suscipit commodi ut, deleniti nobis.
+  form(action="procesar.php").contacto
+    .ed-container
+      .ed-item.web-30
+        label(for="nombres") Nombres y apellidos
+      .ed-item.web-70
+        input(type="text" id="nombres" name="nombres")
+      .ed-item.web-30
+        label(for="correo") Correo electrónico
+      .ed-item.web-70
+        input(type="email" id="correo" name="correo")
+      .ed-item.web-30
+        label(for="mensaje") Su mensaje
+      .ed-item.web-70
+        textarea(name="mensaje", cols="30", rows="10" id="mensaje")
+      .ed-item
+        input(type="submit").enviar
